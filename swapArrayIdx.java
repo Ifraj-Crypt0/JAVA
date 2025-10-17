@@ -13,9 +13,6 @@ public class swapArrayIdx {
         }
         System.out.println("Enter idx");
         int idx = sc.nextInt();
-
-
-
         rotateArrayIdx(arr, idx);
     }
 
