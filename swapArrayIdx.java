@@ -1,0 +1,35 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class swapArrayIdx {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Length of Array");
+        int len = sc.nextInt();
+        int []arr= new int[len];
+        for (int i = 0; i < len; i++) {
+        System.out.print("Enter Element: ");
+        arr[i]=sc.nextInt();
+        }
+        System.out.println("Enter idx");
+        int idx = sc.nextInt();
+
+
+
+        rotateArrayIdx(arr, idx);
+    }
+
+    public static void rotateArrayIdx(int[] arr, int idx) {
+        for (int i = 0; i < idx; i++) {
+            int firstEle = i;
+            int temp = arr[firstEle];
+            int lastEle = arr.length - 1 - i;
+
+            arr[firstEle] = temp;
+            arr[firstEle] = arr[lastEle];
+            temp = arr[lastEle];
+
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
